@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>隐私政策</title>
+    <title>Privacy Policy</title>
     <style>
         * {
             margin: 0;
@@ -12,7 +12,7 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Segoe UI', Roboto, sans-serif;
             background: #f5f5f7;
             padding: 20px;
             line-height: 1.8;
@@ -26,6 +26,25 @@
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .language-selector {
+            text-align: right;
+            margin-bottom: 30px;
+        }
+        
+        .language-selector select {
+            padding: 8px 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            background: white;
+            font-size: 14px;
+            cursor: pointer;
+            outline: none;
+        }
+        
+        .language-selector select:hover {
+            border-color: #0066cc;
         }
         
         h1 {
@@ -79,6 +98,14 @@
             text-decoration: underline;
         }
         
+        .lang-content {
+            display: none;
+        }
+        
+        .lang-content.active {
+            display: block;
+        }
+        
         @media (max-width: 768px) {
             .container {
                 padding: 30px 20px;
@@ -96,40 +123,142 @@
 </head>
 <body>
     <div class="container">
-        <h1>隐私政策</h1>
-        <p class="update-date">最后更新日期：2025年2月</p>
-        
-        <p>感谢您使用我们的应用。我们重视并尊重您的隐私。本隐私政策说明了我们如何收集、使用和保护您的信息。</p>
-        
-        <h2>1. 信息收集</h2>
-        <p>我们的应用是一个离线翻译工具，不收集、存储或传输您的个人信息。</p>
-        
-        <h2>2. 数据使用</h2>
-        <p>所有翻译处理均在您的设备上本地完成。我们不会：</p>
-        <ul>
-            <li>收集您的翻译内容</li>
-            <li>收集您的个人身份信息</li>
-            <li>追踪您的使用行为</li>
-            <li>将您的数据发送到任何服务器</li>
-        </ul>
-        
-        <h2>3. 第三方服务</h2>
-        <p>我们的应用不使用任何第三方分析或广告服务。</p>
-        
-        <h2>4. 数据安全</h2>
-        <p>由于所有数据处理均在本地进行，您的翻译内容完全保留在您的设备上，我们无法访问这些数据。</p>
-        
-        <h2>5. 儿童隐私</h2>
-        <p>我们的应用适合所有年龄段的用户使用，且不收集任何个人信息。</p>
-        
-        <h2>6. 隐私政策变更</h2>
-        <p>我们可能会不时更新本隐私政策。任何变更都会在此页面上发布。</p>
-        
-        <h2>7. 联系我们</h2>
-        <div class="contact">
-            <p>如果您对本隐私政策有任何疑问，请通过以下方式联系我们：</p>
-            <p>电子邮件：<a href="mailto:douningjun@gmail.com">douningjun@gmail.com</a></p>
+        <div class="language-selector">
+            <select id="languageSelect" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="zh">中文</option>
+            </select>
+        </div>
+
+        <!-- English Content -->
+        <div id="content-en" class="lang-content active">
+            <h1>Privacy Policy</h1>
+            <p class="update-date">Last Updated: February 2025</p>
+            
+            <p>Thank you for using our application. We value and respect your privacy. This Privacy Policy explains how we collect, use, and protect your information.</p>
+            
+            <h2>1. Information Collection</h2>
+            <p>Our application is an offline translation tool that does not collect, store, or transmit your personal information.</p>
+            
+            <h2>2. Data Usage</h2>
+            <p>All translation processing is completed locally on your device. We do not:</p>
+            <ul>
+                <li>Collect your translation content</li>
+                <li>Collect your personally identifiable information</li>
+                <li>Track your usage behavior</li>
+                <li>Send your data to any servers</li>
+            </ul>
+            
+            <h2>3. Third-Party Services</h2>
+            <p>Our application does not use any third-party analytics or advertising services.</p>
+            
+            <h2>4. Data Security</h2>
+            <p>Since all data processing is performed locally, your translation content remains entirely on your device, and we cannot access this data.</p>
+            
+            <h2>5. Children's Privacy</h2>
+            <p>Our application is suitable for users of all ages and does not collect any personal information.</p>
+            
+            <h2>6. Privacy Policy Changes</h2>
+            <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page.</p>
+            
+            <h2>7. Disclaimer</h2>
+            <p>The translation results provided by this application are for reference only. We strive to provide accurate translations, but we do not guarantee the complete accuracy, completeness, or suitability of the translations.</p>
+            <p>Users should exercise their own judgment when using translation results. We particularly recommend consulting professional translators for the following situations:</p>
+            <ul>
+                <li>Important documents and contracts</li>
+                <li>Legal documents and materials</li>
+                <li>Medical information and prescriptions</li>
+                <li>Technical documentation and professional content</li>
+                <li>Any content that may have legal or financial consequences</li>
+            </ul>
+            <p>We are not liable for any direct or indirect losses, damages, or consequences resulting from the use of translation results from this application.</p>
+            
+            <h2>8. Contact Us</h2>
+            <div class="contact">
+                <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+                <p>Email: <a href="mailto:douningjun@gmail.com">douningjun@gmail.com</a></p>
+            </div>
+        </div>
+
+        <!-- Chinese Content -->
+        <div id="content-zh" class="lang-content">
+            <h1>隐私政策</h1>
+            <p class="update-date">最后更新日期：2025年2月</p>
+            
+            <p>感谢您使用我们的应用。我们重视并尊重您的隐私。本隐私政策说明了我们如何收集、使用和保护您的信息。</p>
+            
+            <h2>1. 信息收集</h2>
+            <p>我们的应用是一个离线翻译工具，不收集、存储或传输您的个人信息。</p>
+            
+            <h2>2. 数据使用</h2>
+            <p>所有翻译处理均在您的设备上本地完成。我们不会：</p>
+            <ul>
+                <li>收集您的翻译内容</li>
+                <li>收集您的个人身份信息</li>
+                <li>追踪您的使用行为</li>
+                <li>将您的数据发送到任何服务器</li>
+            </ul>
+            
+            <h2>3. 第三方服务</h2>
+            <p>我们的应用不使用任何第三方分析或广告服务。</p>
+            
+            <h2>4. 数据安全</h2>
+            <p>由于所有数据处理均在本地进行，您的翻译内容完全保留在您的设备上，我们无法访问这些数据。</p>
+            
+            <h2>5. 儿童隐私</h2>
+            <p>我们的应用适合所有年龄段的用户使用，且不收集任何个人信息。</p>
+            
+            <h2>6. 隐私政策变更</h2>
+            <p>我们可能会不时更新本隐私政策。任何变更都会在此页面上发布。</p>
+            
+            <h2>7. 免责声明</h2>
+            <p>本应用提供的翻译结果仅供参考。我们尽力提供准确的翻译，但不保证翻译的完全准确性、完整性或适用性。</p>
+            <p>用户在使用翻译结果时应自行判断。对于以下情况，我们特别建议咨询专业翻译人员：</p>
+            <ul>
+                <li>重要文件和合同</li>
+                <li>法律文件和材料</li>
+                <li>医疗信息和处方</li>
+                <li>技术文档和专业内容</li>
+                <li>任何可能产生法律或财务后果的内容</li>
+            </ul>
+            <p>对于因使用本应用翻译结果而导致的任何直接或间接损失、损害或后果，我们不承担法律责任。</p>
+            
+            <h2>8. 联系我们</h2>
+            <div class="contact">
+                <p>如果您对本隐私政策有任何疑问，请通过以下方式联系我们：</p>
+                <p>电子邮件：<a href="mailto:douningjun@gmail.com">douningjun@gmail.com</a></p>
+            </div>
         </div>
     </div>
+
+    <script>
+        function changeLanguage() {
+            const select = document.getElementById('languageSelect');
+            const selectedLang = select.value;
+            
+            // Hide all content
+            document.querySelectorAll('.lang-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Show selected language content
+            document.getElementById('content-' + selectedLang).classList.add('active');
+            
+            // Update page language attribute
+            document.documentElement.lang = selectedLang === 'zh' ? 'zh-CN' : 'en';
+            
+            // Save preference to localStorage
+            localStorage.setItem('preferredLanguage', selectedLang);
+        }
+        
+        // Load saved language preference on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang) {
+                document.getElementById('languageSelect').value = savedLang;
+                changeLanguage();
+            }
+        });
+    </script>
 </body>
 </html>
